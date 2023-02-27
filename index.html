@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="icon" href="img/icon.jpg" sizes="16x16">
     <title>Brutask</title>
 </head>
 <body>
+    <!-- top section  -->
     <div class="container">
-       <img src="img/icon.jpg" alt="logo">
-       <h2>Brutask</h2>
-       <p>Brutask is simple To-Do list for samall companies or teams who 
+       <img src="img/brutask-logo.svg" alt="logo" data-aos="zoom-in">
+       <h1>Brutask</h1>
+       <p>Brutask is simple To-Do list for samall companies or teams who <br>
         work on daily scrums and have regular stand-upsl :)
        </p>
+       <button class="top_add">Add Your task</button>
        <video src="img/Hero illustration 1200x1600.mp4" loop autoplay type="video/mp4" ></video>
+    </div>
+   <!-- taskes  section -->
+    <div class="task_con">
+        <div class="task_inbut">
+            <input type="text" id="inbut"><button>Add <i class="bi bi-arrow-right"></i></button>
+        </div>
+        <div class="tasks">
+            <div class="now">
+                <i class="bi bi-check2-all"></i>
+                <p>Brutask is the simplest collaboration tool</p>
+                <button>Delete <i class="bi bi-trash3"></i></button>
+            </div>
+        </div>
     </div>
     <script src="javascript/scr.js"></script>
 </body>
