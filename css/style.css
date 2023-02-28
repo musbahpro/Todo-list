@@ -1,67 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&display=swap'); /* !! google font */
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&display=swap"); /* !! google font */
 
-:root{  /* !! global variables */
---bold-font :'Caveat Brush', cursive;
---normal-font :'Caveat', cursive;
---min-color :#01B965;
---font-color :#070507;
---effect-color :#FB5E93;
+:root {
+  /* !! global variables */
+  --bold-font: "Caveat Brush", cursive;
+  --normal-font: "Caveat", cursive;
+  --min-color: #01b965;
+  --font-color: #070507;
+  --effect-color: #fb5e93;
 }
 
-*{
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-p,h1,h2{
-margin: 0;
-padding: 0;
+a{
+text-decoration: none;
+color: var(--font-color);
+}
+p,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
 }
 input,
-button{
-outline: none;
-border: none;
+button {
+  outline: none;
+  border: none;
 }
-html{
-scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 /*!  top section  */
-.container{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+ 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.container img{
-    width: 100px;
+.container img {
+  width: 100px;
 }
-.container h1{
-    font-size: 90px;
-    font-family: var(--bold-font);
+.container h1 {
+  font-size: 90px;
+  font-family: var(--bold-font);
 }
-.container p{
-    font-size: 25px;
-    text-align: center;
-    font-family: var(--normal-font);
+.container p {
+  font-size: 25px;
+  text-align: center;
+  font-family: var(--normal-font);
 }
-.top_add{
-    width: 180px;
-    text-align: center;
-    padding: 15px ;
-    font-size: 15px;
-    font-weight: 800;
-    margin-top: 20px;
-    border-radius: 30px;
-    background-color: #dddddd;
-    transition: 0.2s ease-in;
-    cursor: pointer;
+.top_add {
+  width: 180px;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 800;
+  margin-top: 20px;
+  border-radius: 30px;
+  background-color: #dddddd;
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }
 
-.top_add:hover{
-    background-color: var(--effect-color);
-    color: white;
+.top_add:hover {
+  background-color: var(--effect-color);
 }
-.container video{
-    max-width: 1000px;
+.top_add:hover a{
+  color: white;
+}
+.container video {
+  max-width: 900px;
+}
+/*!  taskes  section */
+.task_con {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.task_con h1{
+    font-family: var(--normal-font);
+    font-size: 90px;
+    margin-bottom: 30px;
+}
+.task_con h1 span{
+    color: var(--min-color);
+}
+.task_inbut #inbut {
+  width: 400px;
+  border-radius: 50px;
+  height: 50px;
+  box-shadow: var(--effect-color) 0px 0px 4px 0px;
+  padding-left: 20px;
 }
