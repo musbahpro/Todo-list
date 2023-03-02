@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link rel="icon" href="img/icon.jpg" sizes="16x16">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link rel="icon" href="img/icon.jpg" sizes="16x16" />
     <title>Brutask</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- top section  -->
     <div class="container">
-       <img src="img/brutask-logo.svg" alt="logo" data-aos="zoom-in">
-       <h1>Brutask</h1>
-       <p>Brutask is simple To-Do list for samall companies or teams who <br>
+      <img src="img/brutask-logo.svg" alt="logo" data-aos="zoom-in" />
+      <h1>Brutask</h1>
+      <p>
+        Brutask is simple To-Do list for samall companies or teams who <br />
         work on daily scrums and have regular stand-upsl :)
-       </p>
-       <button href="task_con" class="top_add"><a href="#task_con">Add Your task</a> </button>
-       <video src="img/Hero illustration 1200x1600.mp4" loop autoplay type="video/mp4" ></video>
+      </p>
+      <button href="task_con" class="top_add">
+        <a href="#task_con">Add Your task</a>
+      </button>
+      <video
+        src="img/Hero illustration 1200x1600.mp4"
+        loop
+        autoplay
+        type="video/mp4"
+      ></video>
     </div>
-   <!-- taskes  section -->
+    <!-- taskes  section -->
     <div class="task_con" id="task_con">
-        <h1>Add your <span>tasks</span> for the day</h1>
-        <div class="task_inbut">
-            <input type="text" id="inbut"><button>Add <i class="bi bi-arrow-right"></i></button>
+      <h1>Add your <span>tasks</span> for the day</h1>
+      <div class="task_inbut">
+        <input type="text" id="inbut" placeholder="Add your tasks" />
+        <button id="add_btn">Add <i class="bi bi-arrow-right"></i></button>
+      </div>
+      <div class="tasks">
+        <div class="now">
+          <div class="text">
+            <i class="bi bi-check2-all"></i>
+            <p>Brutask is the simplest collaboration tool</p>
+          </div>
+          <button id="delete">Delete <i class="bi bi-trash3"></i></button>
         </div>
-        <div class="tasks">
-            <div class="now">
-                <i class="bi bi-check2-all"></i>
-                <p>Brutask is the simplest collaboration tool</p>
-                <button>Delete <i class="bi bi-trash3"></i></button>
-            </div>
-        </div>
+      </div>
     </div>
     <script src="javascript/scr.js"></script>
-</body>
+  </body>
 </html>

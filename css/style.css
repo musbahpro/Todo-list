@@ -14,9 +14,9 @@
   margin: 0;
   padding: 0;
 }
-a{
-text-decoration: none;
-color: var(--font-color);
+a {
+  text-decoration: none;
+  color: var(--font-color);
 }
 p,
 h1,
@@ -24,18 +24,23 @@ h2 {
   margin: 0;
   padding: 0;
 }
+
 input,
 button {
   outline: none;
   border: none;
 }
+::selection{
+  background-color: var(--min-color);
+  color: white;
+}
 html {
   scroll-behavior: smooth;
+  
 }
 
 /*!  top section  */
 .container {
- 
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -69,7 +74,7 @@ html {
 .top_add:hover {
   background-color: var(--effect-color);
 }
-.top_add:hover a{
+.top_add:hover a {
   color: white;
 }
 .container video {
@@ -83,18 +88,83 @@ html {
   flex-direction: column;
   align-items: center;
 }
-.task_con h1{
-    font-family: var(--normal-font);
-    font-size: 90px;
-    margin-bottom: 30px;
+.task_con h1 {
+  font-family: var(--normal-font);
+  font-size: 90px;
+  margin-bottom: 30px;
 }
-.task_con h1 span{
-    color: var(--min-color);
+.task_con h1 span {
+  color: var(--min-color);
 }
 .task_inbut #inbut {
   width: 400px;
   border-radius: 50px;
   height: 50px;
-  box-shadow: var(--effect-color) 0px 0px 4px 0px;
+  box-shadow: var(--min-color) 0px 0px 4px 0px;
   padding-left: 20px;
+}
+.task_inbut #inbut:active {
+  box-shadow: var(--effect-color) 0px 0px 4px 0px;
+}
+
+.task_inbut #add_btn {
+  width: 110px;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  font-weight: 800;
+  margin-left: 20px;
+  border-radius: 30px;
+  background-color: var(--min-color);
+  color: #fff;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+
+.task_inbut #add_btn:hover {
+  background-color: var(--effect-color);
+  box-shadow: var(--effect-color) 0px 0px 8px 0px;
+}
+.task_inbut #add_btn:hover i{
+margin-left: 3px;
+transition: 0.2s ease-in;
+}
+/*!  tasks  */
+.tasks {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+}
+.text {
+  display: flex;
+}
+.text i{
+  color: var(--min-color);
+  font-size: 20px;
+  margin-right: 10px;
+}
+.tasks .now {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  text-align: center;
+  align-items: center;
+  border-radius: 50px;
+  padding: 12px 40px 12px 40px;
+  box-shadow: var(--min-color) 0px 0px 4px 0px;
+}
+#delete {
+  background-color: var(--effect-color);
+  border-radius: 40px;
+  width: 80px;
+  padding: 10px;
+  font-weight: 700;
+  color: white;
+  transition: 0.1s ease-in;
+  cursor: pointer;
+}
+#delete:hover {
+  transform: scale(1.1);
 }
