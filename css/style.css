@@ -7,6 +7,7 @@
   --min-color: #01b965;
   --font-color: #070507;
   --effect-color: #fb5e93;
+  --white: #fff;
 }
 
 * {
@@ -30,13 +31,13 @@ button {
   outline: none;
   border: none;
 }
-::selection{
+::selection {
   background-color: var(--min-color);
-  color: white;
+  color: var(--white);
 }
 html {
   scroll-behavior: smooth;
-  
+ 
 }
 
 /*!  top section  */
@@ -66,17 +67,18 @@ html {
   font-weight: 800;
   margin-top: 20px;
   border-radius: 30px;
-  background-color: #dddddd;
-  transition: 0.3s ease-in;
+  background-color: var(--min-color);
+  transition: 0.1s ease-in;
   cursor: pointer;
 }
-
 .top_add:hover {
   background-color: var(--effect-color);
+  box-shadow: var(--effect-color) 0px 0px 8px 0px;
 }
-.top_add:hover a {
-  color: white;
+.top_add a {
+  color: var(--white);
 }
+
 .container video {
   max-width: 900px;
 }
@@ -87,6 +89,17 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.task_con::after {
+  content: "";
+  background-image: url('/img/hero.svg');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 300px;
+  left: 0;
+  width: 350px;
+  height: 620px;
 }
 .task_con h1 {
   font-family: var(--normal-font);
@@ -116,7 +129,7 @@ html {
   margin-left: 20px;
   border-radius: 30px;
   background-color: var(--min-color);
-  color: #fff;
+  color: var(--white);
   transition: 0.1s ease-in;
   cursor: pointer;
 }
@@ -125,9 +138,9 @@ html {
   background-color: var(--effect-color);
   box-shadow: var(--effect-color) 0px 0px 8px 0px;
 }
-.task_inbut #add_btn:hover i{
-margin-left: 3px;
-transition: 0.2s ease-in;
+.task_inbut #add_btn:hover i {
+  margin-left: 3px;
+  transition: 0.2s ease-in;
 }
 /*!  tasks  */
 .tasks {
@@ -140,7 +153,7 @@ transition: 0.2s ease-in;
 .text {
   display: flex;
 }
-.text i{
+.text i {
   color: var(--min-color);
   font-size: 20px;
   margin-right: 10px;
@@ -161,7 +174,7 @@ transition: 0.2s ease-in;
   width: 80px;
   padding: 10px;
   font-weight: 700;
-  color: white;
+  color: var(--white);
   transition: 0.1s ease-in;
   cursor: pointer;
 }
