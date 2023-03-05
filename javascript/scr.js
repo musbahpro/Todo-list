@@ -1,47 +1,52 @@
 let inbut = document.getElementById("inbut");
 let add_btn = document.getElementById("add_btn");
-let tasks = document.getElementsByClassName("tasks");
+let tasks = document.getElementById("tasks");
 
-let arrayoftasks = [];
+let arrayoftasks = [];// min Arrey
 
-let btn_fun = add_btn.addEventListener("click", () => {
-  if (inbut.value !== "") {
+let btn_fun = add_btn.addEventListener("click", (e) => { 
+  e.preventDefault()
+  if (inbut.value !== "") { // Check on if it is empty
     NewTask(inbut.value);
     inbut.value = "";
   }
 });
 
+
 function NewTask(taskText) {
-  let task = {
+
+  let task = { // new task 
     id: Date.now(),
     title: taskText,
     cheked: false,
   };
-  arrayoftasks.push(task);
 
-  ElementsTopage();
+  arrayoftasks.push(task); // push to array
+  ElementsTopage(arrayoftasks); // Elements function 
 }
+
+// Elements To page
+
 function ElementsTopage(Addingtask) {
-  tasks.innerHTML()
+ 
+  tasks.innerHTML = "";
 
   Addingtask.forEach((task) => {
     let now_task = document.createElement("div");
-    now_task.className = "now";
-
-    let task_texts = document.createElement("div");
-    task_texts.className = "text";
-    now_task.appendChild(task_texts);
-
+    let text  = document.createElement("p");
+    text.className = "task_text"
+    now_task.id = "now";
+    now_task.setAttribute("data-id", task.id);
+    text.appendChild(document.createTextNode(task.title));
+    console.log(now_task);
+   
     let icon = document.createElement("i");
-    icon.className = "bi bi-check2-all";
-    task_texts.appendChild(icon);
+    icon.className = "bi bi-trash3";
+    let Del = document.createElement("button");
+    Del.id ="delete";
 
-    let task_text = document.createElement("p");
-    task_text.innerText = inbut.value;
-    task_texts.appendChild(task_text);
-    let Del = document.createElement("span");
-    Del.id = "delete";
-    Del.appendChild(document.createTextNode("Delete"));
+    Del.appendChild(icon)
+    now_task.appendChild(text);
     now_task.appendChild(Del);
     tasks.appendChild(now_task)
   });

@@ -110,9 +110,9 @@ html {
   color: var(--min-color);
 }
 .task_inbut #inbut {
-  width: 400px;
+  width: 700px;
   border-radius: 50px;
-  height: 50px;
+  height: 60px;
   box-shadow: var(--min-color) 0px 0px 4px 0px;
   padding-left: 20px;
 }
@@ -132,18 +132,16 @@ html {
   color: var(--white);
   transition: 0.1s ease-in;
   cursor: pointer;
+  position: relative;
 }
 
 .task_inbut #add_btn:hover {
   background-color: var(--effect-color);
   box-shadow: var(--effect-color) 0px 0px 8px 0px;
 }
-.task_inbut #add_btn:hover i {
-  margin-left: 3px;
-  transition: 0.2s ease-in;
-}
+
 /*!  tasks  */
-.tasks {
+#tasks {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -158,7 +156,7 @@ html {
   font-size: 20px;
   margin-right: 10px;
 }
-.tasks .now {
+#tasks #now {
   display: flex;
   justify-content: space-between;
   width: 60%;
@@ -170,10 +168,11 @@ html {
 }
 #delete {
   background-color: var(--effect-color);
-  border-radius: 40px;
-  width: 80px;
+  border-radius: 30px;
+  width: 50px;
+  font-size: 20px;
   padding: 10px;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--white);
   transition: 0.1s ease-in;
   cursor: pointer;
