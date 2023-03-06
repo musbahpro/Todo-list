@@ -37,35 +37,25 @@ function ElementsTopage(Addingtask) {
 
   Addingtask.forEach((task) => {
     let now_task = document.createElement("div");
-    let icons = document.createElement("div");
-    let text = document.createElement("p");
-    text.className = "task_text";
-    now_task.id = "now";
-    icons.className = "icons";
-    now_task.setAttribute("data-id", task.id);
-    text.appendChild(document.createTextNode(task.title));
+    now_task.className ="now";
 
+    let inbut = document.createElement("input");
+    inbut.type = "text"
 
+    inbut.setAttribute ("readonly","readonly")
+    inbut.className = "task_paragraph";
+    inbut.appendChild(document.createTextNode(task.title))
 
-    let deletIcon = document.createElement("i");
-    deletIcon.className = "bi bi-trash3";
-
-    let Del = document.createElement("button");
-    Del.id = "delet";
-
-    let editIcon = document.createElement("i");
-    editIcon.className = "bi bi-pencil";
-    let edit = document.createElement("button");
-    edit.id = "edit";
-
-Del.appendChild(deletIcon)
-edit.appendChild(editIcon)
-    icons.appendChild(Del);
-    icons.appendChild(edit);
-    now_task.appendChild(text);
-    now_task.appendChild(icons);
+    now_task.appendChild(inbut)
     tasks.appendChild(now_task);
+
+
+  /*  editIcon.addEventListener("click", ()=>{
+      editIcon.removeAttribute("readonly")
+      editIcon.focus();
+    })*/
   });
+  
 }
 let deleteBtn;
 function addTolocal(arrayoftasks) {
@@ -79,4 +69,4 @@ function getData() {
   }
 }
 
-localStorage.clear()
+// edit btn
