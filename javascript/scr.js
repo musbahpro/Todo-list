@@ -36,6 +36,7 @@ function ElementsTopage(Addingtask) {
 
   Addingtask.forEach((task) => {
     let now_task = document.createElement("div");
+<<<<<<< HEAD
     now_task.className = "now";
 
     let inbut = document.createElement("input");
@@ -71,6 +72,25 @@ function ElementsTopage(Addingtask) {
        tasks.removeChild(now_task)
        
     })
+=======
+    now_task.className ="now";
+
+    let inbut = document.createElement("input");
+    inbut.type = "text"
+
+    inbut.setAttribute ("readonly","readonly")
+    inbut.className = "task_paragraph";
+    inbut.appendChild(document.createTextNode(task.title))
+
+    now_task.appendChild(inbut)
+    tasks.appendChild(now_task);
+
+
+  /*  editIcon.addEventListener("click", ()=>{
+      editIcon.removeAttribute("readonly")
+      editIcon.focus();
+    })*/
+>>>>>>> e799e1717398a53c8130e765fe40dde77696fdcb
   });
   
 }
@@ -86,3 +106,7 @@ function getData() {
   }
 }
 
+<<<<<<< HEAD
+=======
+// edit btn
+>>>>>>> e799e1717398a53c8130e765fe40dde77696fdcb
