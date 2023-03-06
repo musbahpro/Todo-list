@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Caveat:wght@400;500;600;700&display=swap"); /* !! google font */
-
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
 :root {
   /* !! global variables */
   --bold-font: "Caveat Brush", cursive;
@@ -84,7 +84,7 @@ html {
 }
 /*!  taskes  section */
 .task_con {
-  height: 100vh;
+  margin-bottom: 40px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -115,6 +115,8 @@ html {
   height: 60px;
   box-shadow: var(--min-color) 0px 0px 4px 0px;
   padding-left: 20px;
+  font-size: 16px;
+    font-family: 'Tilt Neon', cursive;
 }
 .task_inbut #inbut:active {
   box-shadow: var(--effect-color) 0px 0px 4px 0px;
@@ -146,7 +148,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 40px;
 }
 .text {
   display: flex;
@@ -163,20 +165,27 @@ html {
   text-align: center;
   align-items: center;
   border-radius: 50px;
-  padding: 12px 40px 12px 40px;
+  margin-top: 20px;
+  font-family: 'Tilt Neon', cursive;
+  padding: 12px 10px 12px 40px;
   box-shadow: var(--min-color) 0px 0px 4px 0px;
 }
-#delete {
-  background-color: var(--effect-color);
-  border-radius: 30px;
-  width: 50px;
-  font-size: 20px;
+#delet , #edit{
+ 
+  border-radius: 40px;
+  width: 40px;
+  font-size: 14px;
   padding: 10px;
   font-weight: 800;
   color: var(--white);
   transition: 0.1s ease-in;
   cursor: pointer;
 }
-#delete:hover {
-  transform: scale(1.1);
+#delet{
+background-color: var(--effect-color);
+margin-right: 3px;
 }
+#edit{
+background-color: var(--font-color);
+}
+
