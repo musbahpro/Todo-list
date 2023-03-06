@@ -122,7 +122,7 @@ html {
   box-shadow: var(--effect-color) 0px 0px 4px 0px;
 }
 
-.task_inbut #add_btn {
+.task_inbut #add_btn ,button{
   width: 110px;
   text-align: center;
   padding: 15px;

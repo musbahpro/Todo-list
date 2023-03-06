@@ -9,7 +9,6 @@ if (localStorage.getItem("tasks")) {
 
 getData();
 let btn_fun = add_btn.addEventListener("click", (e) => {
-  e.preventDefault();
   if (inbut.value !== "") {
     // Check on if it is empty
     NewTask(inbut.value);
@@ -37,37 +36,45 @@ function ElementsTopage(Addingtask) {
 
   Addingtask.forEach((task) => {
     let now_task = document.createElement("div");
-    let icons = document.createElement("div");
-    let text = document.createElement("p");
-    text.className = "task_text";
-    now_task.id = "now";
-    icons.className = "icons";
-    now_task.setAttribute("data-id", task.id);
-    text.appendChild(document.createTextNode(task.title));
+    now_task.className = "now";
 
+    let inbut = document.createElement("input");
+    
+    inbut.type =  ("text")
+    inbut.value =  (task.title) 
+    inbut.setAttribute("readonly","readonly")
 
+     let buttons = document.createElement("div");
 
-    let deletIcon = document.createElement("i");
-    deletIcon.className = "bi bi-trash3";
+    let edit_btn = document.createElement("button");
+    edit_btn.innerHTML = "EDIT"
+    edit_btn.id = "edit_btn"
 
-    let Del = document.createElement("button");
-    Del.id = "delet";
-
-    let editIcon = document.createElement("i");
-    editIcon.className = "bi bi-pencil";
-    let edit = document.createElement("button");
-    edit.id = "edit";
-
-Del.appendChild(deletIcon)
-edit.appendChild(editIcon)
-    icons.appendChild(Del);
-    icons.appendChild(edit);
-    now_task.appendChild(text);
-    now_task.appendChild(icons);
+    let delite_btn = document.createElement("button");
+    delite_btn.innerHTML = "DELITE"
+    delite_btn.id = "delite_btn"
+    
+    buttons.appendChild(edit_btn)
+    buttons.appendChild(delite_btn)
+    now_task.appendChild(inbut) 
+    now_task.appendChild(buttons) 
     tasks.appendChild(now_task);
+ 
+    //! --------  Edit btn function
+    edit_btn.addEventListener("click", ()=>{
+       inbut.toggleAttribute("readonly")
+       inbut.classList.toggle ("red")
+       inbut.focus()       
+    }) 
+    //! --------  Delite btn function
+    delite_btn.addEventListener("click", ()=>{
+       tasks.removeChild(now_task)
+       
+    })
   });
+  
 }
-let deleteBtn;
+
 function addTolocal(arrayoftasks) {
   localStorage.setItem("tasks", JSON.stringify(arrayoftasks));
 }
@@ -79,4 +86,3 @@ function getData() {
   }
 }
 
-localStorage.clear()
