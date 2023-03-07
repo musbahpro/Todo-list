@@ -63,7 +63,7 @@ function ElementsTopage(Addingtask) {
     //! --------  Edit btn function
     edit_btn.addEventListener("click", ()=>{
        inbut.toggleAttribute("readonly")
-       inbut.classList.toggle ("red")
+       edit_btn.classList.toggle ("red")
        inbut.focus()       
     }) 
     //! --------  Delite btn function

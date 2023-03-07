@@ -161,7 +161,7 @@ nav{
   font-size: 20px;
   margin-right: 10px;
 }
-#tasks #now {
+#tasks .now {
   display: flex;
   justify-content: space-between;
   width: 60%;
@@ -173,8 +173,7 @@ nav{
   padding: 12px 10px 12px 40px;
   box-shadow: var(--min-color) 0px 0px 4px 0px;
 }
-#delet , #edit{
- 
+#edit_btn , #delite_btn{
   border-radius: 40px;
   width: 40px;
   font-size: 14px;
@@ -182,13 +181,17 @@ nav{
   font-weight: 800;
   color: var(--white);
   transition: 0.1s ease-in;
+  font-size: 10PX;
   cursor: pointer;
 }
-#delet{
+#delite_btn{
 background-color: var(--effect-color);
 margin-right: 3px;
 }
-#edit{
-background-color: var(--font-color);
+#edit_btn{
+background-color: var(--min-color);
+}
+.red{
+background-color: red !important;
 }
 
