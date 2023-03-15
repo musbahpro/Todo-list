@@ -8,10 +8,12 @@ if (localStorage.getItem("tasks")) {
 }
 
 getData();
-let btn_fun = add_btn.addEventListener("click", (e) => {
-  if (inbut.value !== "") {
+
+let AddFunction = add_btn.addEventListener("click", (e) => {
+  let TaskInbut = inbut.value;
+  if ( TaskInbut !== "" ) {
     // Check on if it is empty
-    NewTask(inbut.value);
+    NewTask(TaskInbut);
     inbut.value = "";
   }
 });
@@ -25,7 +27,6 @@ function NewTask(taskText) {
   };
   arrayoftasks.push(task); // push to array
   ElementsTopage(arrayoftasks); // Elements function
-
   addTolocal(arrayoftasks);
 }
 
@@ -37,7 +38,7 @@ function ElementsTopage(Addingtask) {
   Addingtask.forEach((task) => {
     let now_task = document.createElement("div");
     now_task.className = "now";
-now_task.setAttribute("date-id" , task.id)
+    now_task.setAttribute("date-id" , task.id)
     let inbut = document.createElement("input");
     
     inbut.type =  ("text")
@@ -69,15 +70,14 @@ now_task.setAttribute("date-id" , task.id)
     //! --------  Delite btn function
     delite_btn.addEventListener("click", (e)=>{
        tasks.removeChild(now_task)
-     
-      Delited("date-id" , task.id)
+       Deletes("date-id" , task.id)
     })
   });
   
 }
 
 
-function Delited(e) {
+function Deletes(e) {
 
 let notes = localStorage.getItem("tasks")
 if (notes == null) {
@@ -94,6 +94,7 @@ localStorage.setItem("tasks", JSON.stringify(arrayoftasks))
 function addTolocal(arrayoftasks) {
   localStorage.setItem("tasks", JSON.stringify(arrayoftasks));
 }
+
 
 function getData() {
   let data = localStorage.getItem("tasks");
