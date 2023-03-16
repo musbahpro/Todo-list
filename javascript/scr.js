@@ -46,7 +46,7 @@ function ElementsTopage(Addingtask) {
     inbut.setAttribute("readonly","readonly")
 
      let buttons = document.createElement("div");
-
+buttons.className = "buttons"
     let edit_btn = document.createElement("button");
     edit_btn.innerHTML = "EDIT"
     edit_btn.id = "edit_btn"

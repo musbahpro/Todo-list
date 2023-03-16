@@ -85,6 +85,20 @@ nav{
 .container video {
   max-width: 900px;
 }
+@media only screen and (max-width: 900px) {
+.container video{
+  width: 80%;
+}
+.container h1 {
+  font-size: 60px;
+  font-family: var(--bold-font);
+}
+.container p {
+  font-size: 20px;
+  font-family: var(--bold-font);
+}
+
+}
 /*!  taskes  section */
 .task_con {
   margin-bottom: 40px;
@@ -180,6 +194,7 @@ nav{
   padding: 10px;
   font-weight: 800;
   color: var(--white);
+  
   transition: 0.1s ease-in;
   font-size: 10PX;
   cursor: pointer;
@@ -195,3 +210,34 @@ background-color: var(--min-color);
 background-color: red !important;
 }
 
+@media only screen and (max-width: 900px){
+  .task_con h1{
+    font-size: 40px;
+}
+.task_inbut #inbut{
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.task_inbut #add_btn, button{
+ display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.task_con::after{
+  display: none;
+}
+#tasks .now{
+  width: 100%;
+    padding: 0px 0px 0px 25px;
+
+}
+.buttons{
+  display: flex;
+}
+#edit_btn , #delite_btn{
+margin: 5px;
+}
+}
